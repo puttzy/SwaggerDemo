@@ -15,7 +15,6 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger
-//@ComponentScan("com.csg.putt.demo.azure")
 public class WebAppConfig {
     public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList("^(?!/error|/internal/).*$");
     private static final String SWAGGER_GROUP = "";
@@ -23,7 +22,7 @@ public class WebAppConfig {
     @Bean
     public SwaggerSpringMvcPlugin swaggerPlugin(SpringSwaggerConfig springSwaggerConfig) {
         return new SwaggerSpringMvcPlugin(springSwaggerConfig)
-                .apiInfo(new ApiInfo("Acme APIs", "REST documentation for Acme APIs", "http://example.com", "eng@example.com", "Copyright Example.com", "http://example.com"))
+                .apiInfo(new ApiInfo("Swagger Demo API", "DEMO using the swagger for spring library", "http://cardinal.com.com", "dputt@cardinalsolutionsl.com", "Copyright CardinalSolutions.com", "http://CardinalSolutions.com"))
                 .includePatterns(DEFAULT_INCLUDE_PATTERNS.toArray(new String[DEFAULT_INCLUDE_PATTERNS.size()]))
                 .swaggerGroup(SWAGGER_GROUP)
                 ;
