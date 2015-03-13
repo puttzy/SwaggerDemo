@@ -1,6 +1,8 @@
 package com.csg.putt.demo.azure.obj;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mangofactory.swagger.plugin.EnableSwagger;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 /**
  * Created by dputt on 2/13/15.
@@ -8,13 +10,16 @@ import com.mangofactory.swagger.plugin.EnableSwagger;
 
 @EnableSwagger
 public class Car {
+
+
     int carId;
     int year;
     String make;
     String model;
     String series;
+    String vin;
 
-
+    @ApiModelProperty(access = "hidden")
     public int getCarId() {
         return carId;
     }
@@ -53,5 +58,13 @@ public class Car {
 
     public void setSeries(String series) {
         this.series = series;
+    }
+
+    public String getVin() {
+        return vin;
+    }
+
+    public void setVin(String vin) {
+        this.vin = vin;
     }
 }

@@ -2,10 +2,7 @@ package com.csg.putt.demo.azure.restcontrollers;
 
 import com.csg.putt.demo.azure.obj.Car;
 import com.mangofactory.swagger.plugin.EnableSwagger;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
-import com.wordnik.swagger.annotations.ApiResponse;
-import com.wordnik.swagger.annotations.ApiResponses;
+import com.wordnik.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -50,9 +47,9 @@ public class GarageController {
             @ApiResponse(code = 404, message = "GARAGE Not Found"),
             @ApiResponse(code = 500, message = "Something exceptional happend!  Be afraid") }
     )
+    @ApiImplicitParams(@ApiImplicitParam(dataType = "Car", name = "Car", paramType = "body"))
     @RequestMapping(value = "/{garageId}/", method = RequestMethod.PUT)
     public @ResponseBody ResponseEntity addCarToGarage(
-            @RequestBody ArrayList<Car> observations
     )   {
         // Delete Car
         return new ResponseEntity( HttpStatus.OK);
