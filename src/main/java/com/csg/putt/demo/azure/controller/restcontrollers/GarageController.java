@@ -1,4 +1,4 @@
-package com.csg.putt.demo.azure.restcontrollers;
+package com.csg.putt.demo.azure.controller.restcontrollers;
 
 import com.csg.putt.demo.azure.obj.Car;
 import com.mangofactory.swagger.plugin.EnableSwagger;

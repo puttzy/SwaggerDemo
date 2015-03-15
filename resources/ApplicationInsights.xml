@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationInsights xmlns="http://schemas.microsoft.com/ApplicationInsights/2013/Settings" schemaVersion="2014-05-30"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://schemas.microsoft.com/ApplicationInsights/2013/Settings ">
+    <InstrumentationKey>5f09ce4e-7f2a-4eea-a55f-f2f4b4788326</InstrumentationKey>
+</ApplicationInsights>

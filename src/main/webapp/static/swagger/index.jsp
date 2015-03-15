@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: Dan
+  Date: 3/14/2015
+  Time: 8:56 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
   <title>Swagger UI</title>
@@ -37,7 +44,7 @@
 <body class="swagger-section">
 <div id='header'  style="background-color: #172952">
   <div class="swagger-ui-wrap" style="background-color: #172952">
-    <a href="Cardinal Solutions"><img src="./images/cardinallogo.png" /></a>
+    <a href="http://www.CardinalSolutions.com"><img src="images/cardinallogo.png" /></a>
 
   </div>
 
@@ -47,3 +54,4 @@
 <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
 </body>
 </html>
+
