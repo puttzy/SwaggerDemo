@@ -1,4 +1,5 @@
 package com.csg.putt.demo.azure;
+/*
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +16,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
+*/
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
-@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@WebAppConfiguration
+//@ContextConfiguration("file:src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml")
 public class AppTests {
-    private MockMvc mockMvc;
+  /*  private MockMvc mockMvc;
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
@@ -34,8 +36,9 @@ public class AppTests {
 
     @Test
     public void simple() throws Exception {
-       /* mockMvc.perform(get("/"))
+       *//* mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("hello"));*/
+                .andExpect(view().name("hello"));*//*
     }
+*/
 }

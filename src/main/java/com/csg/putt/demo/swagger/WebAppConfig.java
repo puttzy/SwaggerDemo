@@ -19,14 +19,16 @@ public class WebAppConfig {
     @Bean
     public SwaggerSpringMvcPlugin swaggerPlugin(SpringSwaggerConfig springSwaggerConfig) {
         return new SwaggerSpringMvcPlugin(springSwaggerConfig)
-                .apiInfo(new ApiInfo("Book Review Demo (Swagger + Spring MVC)",
+                .apiInfo(new ApiInfo("Book BookReview Demo (Swagger + Spring MVC)",
                         "DEMO using the <a href='https://github.com/springdox/swagger-springmvc'>swagger for spring library.</a><br><br> " +
-                         " This demo shows only the methods available and provides a way to click around and play with swagger.  Thereis no funcationality to this demo at all ",
+                         " This demo shows only the methods available and provides a way to click around and play with swagger.  " +
+                         "  There is no functionality to this demo at all. ",
                         "http://cardinal.com",
                         "dputt@cardinalsolutions.com",
                         "Copyright CardinalSolutions.com",
                         "http://CardinalSolutions.com"))
                 .includePatterns(DEFAULT_INCLUDE_PATTERNS.toArray(new String[DEFAULT_INCLUDE_PATTERNS.size()]))
+                .useDefaultResponseMessages(false)
                 .swaggerGroup(SWAGGER_GROUP)
                 ;
     }

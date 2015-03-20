@@ -60,9 +60,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.mangofactory</groupId>
-            <artifactId>swagger-springmvc</artifactId>
-            <version>0.9.5</version>
+            <groupId>com.github.springdox</groupId>
+            <artifactId>springdox-swagger</artifactId>
+            <version>2.0.0-DANGEROUS</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -79,6 +79,11 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mangofactory</groupId>
+            <artifactId>swagger-springmvc</artifactId>
+            <version>0.9.5</version>
         </dependency>
 
 
