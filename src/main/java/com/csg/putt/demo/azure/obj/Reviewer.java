@@ -2,11 +2,12 @@ package com.csg.putt.demo.azure.obj;
 
 
 import com.mangofactory.swagger.plugin.EnableSwagger;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Created by Dan on 3/16/2015.
  */
-@EnableSwagger
+@EnableSwagger2
 public class Reviewer {
 
     String user;

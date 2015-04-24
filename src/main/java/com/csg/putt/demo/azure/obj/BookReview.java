@@ -4,12 +4,13 @@ package com.csg.putt.demo.azure.obj;
 import com.mangofactory.swagger.plugin.EnableSwagger;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 /**
  * Created by Dan on 3/16/2015.
  */
-@EnableSwagger
+@EnableSwagger2
 @ApiModel(value="Book Review Model", description="Sample model for the Sample model for the documentation")
 public class BookReview {
 

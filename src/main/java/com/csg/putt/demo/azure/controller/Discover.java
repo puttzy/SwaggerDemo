@@ -9,19 +9,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import static org.springframework.http.MediaType.*;
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+
 /**
  * Created by Dan on 3/18/2015.
  */
 
-@Api(value = "Discover Books", basePath = "/discover", description = "Helps discover books based on review criterea", consumes = "application/json" , produces = "application/json")
-@RequestMapping("/discover")
+@Api(value = "Discover", basePath = "/discover", description = "Helps discover books based on review criterea", consumes = "application/json" , produces = "application/json")
+@RequestMapping(value = "/discover", produces = {APPLICATION_JSON_VALUE, APPLICATION_XML_VALUE})
 @RestController
 public class Discover {
 
     @ApiOperation(value = "Using any variety of optional parameters this will help discover books meeting critereo"
-            , notes = "This will enable a user tp seach for book base on a number of different optional parameters"
+            , notes = "This will enable a user to search for book based on a number of different optional parameters"
             , httpMethod = "GET"
             , produces = "application/json"
+            , response = Book.class
+            , responseContainer = "List"
     )
     @ApiResponses({
             @ApiResponse(code = 200, message = "OK", response = Book.class),
