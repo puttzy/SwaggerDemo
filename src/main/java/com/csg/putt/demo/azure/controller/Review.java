@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.csg.putt.demo.azure.Responses.ok;
+
 /**
  * Created by Dan on 3/16/2015.
  */
@@ -70,10 +72,9 @@ public class Review {
     }
 
     @ApiOperation(value = "Used to remove a review from a book"
-            , notes = "In the real world this would haev to have some kind of atuthentication / authorization tied to it, but for" +
+            , notes = "In the real world this would have to have some kind of atuthentication / authorization tied to it, but for" +
             "   demo purposees this should show the desired socumentation.  "
-            , httpMethod = "DELETE"
-            , produces = "application/json"
+            
     )
     @ApiResponses({
             @ApiResponse(code = 202, message = "Deleted"),
@@ -81,18 +82,17 @@ public class Review {
             @ApiResponse(code = 500, message = "Sadness arises from within as something bad happened but we're not gonna tell you what exactly")
     })
     @RequestMapping(value = "/{reviewId}", method = RequestMethod.DELETE)
-    public @ResponseBody ResponseEntity<Object> deleteReview(
+    public @ResponseBody ResponseEntity<String> deleteReview(
             @ApiParam(value = "Id of the review to remove", required = true) @PathVariable(value = "reviewId") Long reviewId
     )   {
-        if (reviewId != 9780739346778L ){
-            return new ResponseEntity<Object>(new Exception("ISBN Not Found Exception"), HttpStatus.NOT_FOUND);
+        if (reviewId == 1) {
+            return Responses.ok();
         }
-
-        return new ResponseEntity<Object>( HttpStatus.OK);
+        return Responses.notFound();
     }
 
     @ApiOperation(value = "Find review(s) from a specific reviewer"
-            , notes = " "
+            , notes = " NOTES!!!"
             , httpMethod = "GET"
             , produces = "application/json"
             , response = BookReview.class
@@ -109,8 +109,7 @@ public class Review {
     )   {
         List<BookReview> reviews = new ArrayList<BookReview>();
 
-        return Responses.ok(reviews);
-//        return new ResponseEntity<BookReview>( reviews,  HttpStatus.OK);
+        return ok(reviews);
     }
 
 

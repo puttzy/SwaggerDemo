@@ -32,8 +32,11 @@ public class SwaggerConfiguration {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .forCodeGeneration(true)
                 .select()
+
                 .build();
-        //Docket.globalResponseMessage(RequestMethod.GET, ImmutableList.of(new ResponseMessage(200, "Some global OK message",null)));
+
+        docket.globalResponseMessage(RequestMethod.GET, ImmutableList.of(new ResponseMessage(200, "Some global OK message", null)));
+        docket.globalResponseMessage(RequestMethod.DELETE, ImmutableList.of(new ResponseMessage(200, "Some global OK message", null)));
         return docket;
     }
 
