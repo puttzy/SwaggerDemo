@@ -1,8 +1,8 @@
 package com.csg.putt.demo.swagger.config;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
@@ -18,7 +18,7 @@ import javax.servlet.ServletRegistration;
  */
 public class SpringWebAppInitializer implements WebApplicationInitializer {
 
-    private static final Logger logger = LoggerFactory.getLogger(SpringWebAppInitializer.class);
+    private static final Logger logger = LogManager.getLogger(SpringWebAppInitializer.class.getName());
     /* (non-Javadoc)
      * @see org.springframework.web.WebApplicationInitializer#onStartup(javax.servlet.ServletContext)
      */

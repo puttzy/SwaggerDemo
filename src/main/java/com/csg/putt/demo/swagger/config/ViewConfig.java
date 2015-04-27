@@ -1,7 +1,7 @@
 package com.csg.putt.demo.swagger.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
@@ -12,7 +12,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 public class ViewConfig{
-    private static final Logger logger =  LoggerFactory.getLogger(ViewConfig.class);
+
+    private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(ViewConfig.class.getName());
     @Bean
     public ViewResolver viewResolver() {
 

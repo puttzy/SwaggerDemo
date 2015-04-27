@@ -1,8 +1,8 @@
 package com.csg.putt.demo.swagger.config;
 
 import com.csg.putt.demo.swagger.config.swagger.SwaggerConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -20,9 +20,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Import(SwaggerConfiguration.class)
 public class MvcContextConfig extends WebMvcConfigurerAdapter {
 
-        private static final Logger logger = LoggerFactory.getLogger(MvcContextConfig.class);
+        private static final Logger logger = LogManager.getLogger(WebMvcConfigurerAdapter.class.getName());
 
-        /* (non-Javadoc)
+
+    /* (non-Javadoc)
          * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter#configureDefaultServletHandling(org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer)
          */
         @Override
@@ -34,21 +35,10 @@ public class MvcContextConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        System.out.println("------------------- adding handler");
+        logger.debug("MY HANDLER ADDED");
         registry.addResourceHandler("/api/").addResourceLocations("/static/swagger/");
 
     }
-
-/*
-
-    <mvc:resources mapping="/api/**" location="/static/swagger/" />
-
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    <property name="prefix" value="/WEB-INF/pages/"/>
-    <property name="suffix" value=".jsp"/>
-    </bean>
-*/
-
 
 }
 

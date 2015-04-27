@@ -1,6 +1,6 @@
 package com.csg.putt.demo.swagger.service;
 
-import com.csg.putt.demo.dao.BookDao;
+import com.csg.putt.demo.swagger.dao.BookDao;
 import com.csg.putt.demo.swagger.obj.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +18,10 @@ public class BookService {
 
     public List<Book> getAllBooks(){
         return bookDao.getAllBooks();
+    }
+
+    public Book addBook(Book book){
+        return bookDao.addBook(book);
     }
 
 

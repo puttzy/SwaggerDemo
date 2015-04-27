@@ -1,6 +1,8 @@
-package com.csg.putt.demo.dao;
+package com.csg.putt.demo.swagger.dao;
 
 import com.csg.putt.demo.swagger.obj.Book;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.List;
  */
 @Repository
 public class BookDao {
+    private static final Logger logger = LogManager.getLogger(BookDao.class.getName());
 
     private static ArrayList<Book> dbBooks = null;
 
@@ -31,6 +34,8 @@ public class BookDao {
     }
 
     public List<Book> findBooks(String title, String lastName, String firstName){
+        logger.debug("Finding books");
+
         List<Book> matchingBooks = new ArrayList<Book>();
         for (Book book : dbBooks){
             if (title != null){
@@ -51,6 +56,13 @@ public class BookDao {
             matchingBooks.add(book);
         }
         return matchingBooks;
+    }
+
+    public Book addBook(Book book){
+        book.setBookid(new Integer(dbBooks.size()));
+        Book newBook = book;
+        dbBooks.add(newBook);
+        return newBook;
     }
 
 }
