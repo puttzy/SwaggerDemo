@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.springapp</groupId>
-    <artifactId>SpringIntellijAzure</artifactId>
+    <artifactId>SwaggerDemo</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringIntellijAzure</name>
+    <name>SwaggerDemo</name>
 
     <properties>
         <spring.version>4.1.4.RELEASE</spring.version>
@@ -16,6 +16,11 @@
             <id>jcenter-snapshots</id>
             <name>jcenter</name>
             <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+        </repository>
+        <repository>
+            <id>mvn</id>
+            <name>maveb</name>
+            <url>http://repo.maven.apache.org/maven2/</url>
         </repository>
     </repositories>
 
@@ -109,11 +114,16 @@
             <version>0.9.5</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.4</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>SpringIntellijAzure</finalName>
+        <finalName>SwaggerDemo</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

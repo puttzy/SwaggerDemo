@@ -1,4 +1,4 @@
-package com.csg.putt.demo.config;
+package com.csg.putt.demo.swagger.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

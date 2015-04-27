@@ -1,6 +1,6 @@
-package com.csg.putt.demo.config;
+package com.csg.putt.demo.swagger.config;
 
-import com.csg.putt.demo.swagger.SwaggerConfiguration;
+import com.csg.putt.demo.swagger.config.swagger.SwaggerConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.csg.putt.demo.azure","com.csg.putt.demo.azure.controller" })
+@ComponentScan(basePackages = { "com.csg.putt.demo.*", "com.csg.putt.demo.swagger.controller"})
 @Import(SwaggerConfiguration.class)
 public class MvcContextConfig extends WebMvcConfigurerAdapter {
 

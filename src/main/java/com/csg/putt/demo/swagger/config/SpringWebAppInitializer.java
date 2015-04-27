@@ -1,4 +1,4 @@
-package com.csg.putt.demo.config;
+package com.csg.putt.demo.swagger.config;
 
 
 import org.slf4j.Logger;
@@ -8,7 +8,6 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -33,7 +32,7 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
     }
     private WebApplicationContext getContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("com.csg.putt.demo.config"); //Path for the config classes
+        context.setConfigLocation("com.csg.putt.demo.swagger.config"); //Path for the config classes
         return context;
     }
 

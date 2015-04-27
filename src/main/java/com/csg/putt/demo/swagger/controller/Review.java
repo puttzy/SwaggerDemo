@@ -1,9 +1,8 @@
-package com.csg.putt.demo.azure.controller;
+package com.csg.putt.demo.swagger.controller;
 
-import com.csg.putt.demo.azure.Responses;
-import com.csg.putt.demo.azure.obj.Book;
-import com.csg.putt.demo.azure.obj.BookReview;
-import com.csg.putt.demo.azure.obj.Reviewer;
+import com.csg.putt.demo.swagger.responses.Responses;
+import com.csg.putt.demo.swagger.obj.BookReview;
+import com.csg.putt.demo.swagger.obj.Reviewer;
 import com.wordnik.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.csg.putt.demo.azure.Responses.ok;
+import static com.csg.putt.demo.swagger.responses.Responses.ok;
 
 /**
  * Created by Dan on 3/16/2015.
@@ -25,8 +24,7 @@ public class Review {
 
 
     @ApiOperation(value = "Used to add a review to a book"
-            , notes = "When adding a review be sure the ISBN exists.  If the pased in ISBN is not found a 404 will be returned." +
-            "   for purposes of this demo only a few ISBNs are valid:  9780739346778"
+            , notes = "When adding a review be sure the ISBN exists.  If the ISBN passed in is not found a 404 will be returned."
             , httpMethod = "POST"
             , produces = "application/json"
     )
@@ -74,7 +72,7 @@ public class Review {
     @ApiOperation(value = "Used to remove a review from a book"
             , notes = "In the real world this would have to have some kind of atuthentication / authorization tied to it, but for" +
             "   demo purposees this should show the desired socumentation.  "
-            
+
     )
     @ApiResponses({
             @ApiResponse(code = 202, message = "Deleted"),

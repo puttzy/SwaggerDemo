@@ -1,4 +1,4 @@
-package com.csg.putt.demo.azure.obj;
+package com.csg.putt.demo.swagger.obj;
 
 import com.wordnik.swagger.annotations.ApiModel;
 
@@ -9,12 +9,13 @@ import com.wordnik.swagger.annotations.ApiModel;
 @ApiModel(value="Model For the book", description="Basic properties of a book")
 public class Book {
 
-    String isbn;
-    String title;
-    String authorLastName;
-    String authorFirstName;
-    String publishYear;
-    String bookid;
+
+    private String isbn;
+    private String title;
+    private String authorLastName;
+    private String authorFirstName;
+    private Integer publishYear;
+    private Integer bookid;
 
     public String getIsbn() {
         return isbn;
@@ -48,19 +49,29 @@ public class Book {
         this.authorFirstName = authorFirstName;
     }
 
-    public String getPublishYear() {
+    public Integer getPublishYear() {
         return publishYear;
     }
 
-    public void setPublishYear(String publishYear) {
+    public void setPublishYear(Integer publishYear) {
         this.publishYear = publishYear;
     }
 
-    public String getBookid() {
+    public Integer getBookid() {
         return bookid;
     }
 
-    public void setBookid(String bookid) {
+    public void setBookid(Integer bookid) {
         this.bookid = bookid;
+    }
+
+    public Book(String isbn, String title, String authorLastName, String authorFirstName, Integer integer, Integer integer1) {
+        this.isbn = isbn;
+        this.title = title;
+        this.authorLastName = authorLastName;
+        this.authorFirstName = authorFirstName;
+        this.publishYear = integer;
+        this.bookid = integer1;
+
     }
 }
