@@ -1,8 +1,8 @@
 package com.csg.putt.demo.swagger.controller;
 
-import com.csg.putt.demo.swagger.responses.Responses;
 import com.csg.putt.demo.swagger.obj.BookReview;
 import com.csg.putt.demo.swagger.obj.Reviewer;
+import com.csg.putt.demo.swagger.responses.Responses;
 import com.wordnik.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

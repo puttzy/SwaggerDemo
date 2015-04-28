@@ -37,7 +37,7 @@ public class Shelf {
             @ApiResponse(code = 200, message = "OK", response = Book.class),
             @ApiResponse(code = 500, message = "Sadness arises from within as something bad happened but we're not gonna tell you what exactly")
     })
-    @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json"  )
+    @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json" , consumes = "application/json")
     public @ResponseBody
     ResponseEntity<Book> addBook(
             @ApiParam(value = "Book - and all of it's details", required = true) @RequestBody  Book book
