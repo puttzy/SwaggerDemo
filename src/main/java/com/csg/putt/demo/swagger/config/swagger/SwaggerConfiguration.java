@@ -47,7 +47,7 @@ public class SwaggerConfiguration {
     }
 
     private ApiInfo createAPIInfo(){
-        return new ApiInfo("Book BookReview Demo (Swagger + Spring MVC)",
+        return new ApiInfo("Book Review Demo (Swagger + Spring MVC)",
                         "DEMO using the <a href='https://github.com/springdox/swagger-springmvc'>swagger for spring library.</a><br><br> " +
                                 " This demo shows only the methods available and provides a way to click around and play with swagger.  " +
                                 "  There is no functionality to this demo at all.  "+  "   <br>For purposes of this demo only a few ISBNs are valid:" +

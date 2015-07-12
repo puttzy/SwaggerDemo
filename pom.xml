@@ -8,7 +8,7 @@
     <name>SwaggerDemo</name>
 
     <properties>
-        <spring.version>4.1.6.RELEASE</spring.version>
+        <spring.version>4.1.7.RELEASE</spring.version>
         <springfox.version>2.0.1-SNAPSHOT</springfox.version>
         <jackson.version>2.5.2</jackson.version>
     </properties>
@@ -19,6 +19,8 @@
             <name>jcenter</name>
             <url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
         </repository>
+
+
 
     </repositories>
 
@@ -121,13 +123,13 @@
             <artifactId>swagger-springmvc</artifactId>
             <version>0.9.5</version>
         </dependency>-->
-
+<!--
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.4</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>
