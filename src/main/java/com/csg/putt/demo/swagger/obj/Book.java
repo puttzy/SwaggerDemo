@@ -1,6 +1,8 @@
 package com.csg.putt.demo.swagger.obj;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 /**
  * Created by Dan on 3/18/2015.
@@ -57,12 +59,20 @@ public class Book {
         this.publishYear = publishYear;
     }
 
+
     public Integer getBookid() {
         return bookid;
     }
 
+
     public void setBookid(Integer bookid) {
         this.bookid = bookid;
+    }
+
+
+
+    public Book(){
+
     }
 
     public Book(String isbn, String title, String authorLastName, String authorFirstName, Integer integer, Integer integer1) {
