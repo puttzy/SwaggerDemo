@@ -5,6 +5,6 @@
 <title>404 not found</title>
 </head>
 <body>
-${pageContext.errorData.statusCode}
+${pageContext.errorData.statusCode} page not found
 </body>
 </html>
